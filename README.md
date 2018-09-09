@@ -18,7 +18,7 @@ Instruction notes can be found [here](https://classroom.udacity.com/nanodegrees/
 
 2. Create a directory folder **news** under __/vagrant__
 
-3. Copy the uploaded assignment file **log_analysis_app.py** and paste it into the **news** folder (created in step 2)
+3. Copy the uploaded assignment file **logs_analysis_app.py** and paste it into the **news** folder (created in step 2)
 
 4. Connect to the **news** database and execute the script below to create a new view, **articles_ranking**. This view is required by the first two log analysis sql query statement
   
