@@ -123,7 +123,7 @@ def display_severe_errors_dates(rows):
 
 if __name__ == "__main__":
     try:
-        print("[Log Analysis]\n")
+        print("[Logs Analysis]\n")
         display_popular_articles(get_popular_articles(3))
         print("\n")
         display_popular_authors(get_popular_authors())
