@@ -24,7 +24,8 @@ Instruction notes can be found [here](https://classroom.udacity.com/nanodegrees/
   
 
    ```sql
-   create view articles_ranking as (select path, count(*) as view_count 
+   create view articles_ranking as 
+   (select path, count(*) as view_count 
    from log where path like '/article/%' 
    group by path 
    order by view_count desc);
