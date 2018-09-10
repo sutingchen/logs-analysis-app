@@ -39,25 +39,9 @@ In **/vagrant/news**, execute the following command line:
    python log_analysis_app.py
    ```
   
-Once executed, the log analysis results should be displayed as plain text below:
-   ```
-   [Logs Analysis]
+Once executed, the log analysis results should be displayed as plain text. 
 
-   The most popular three articles of all time:
-   1. "Candidate is jerk, alleges rival" - 338,647 views
-   2. "Bears love berries, alleges bear" - 253,801 views
-   3. "Bad things gone, say good people" - 170,098 views
-
-
-   The most popular article authors of all time:
-   1. Ursula La Multa - 507,594 views
-   2. Rudolf von Treppenwitz - 423,457 views
-   3. Anonymous Contributor - 170,098 views
-   4. Markoff Chaney - 84,557 views
-
-   Dates having more than 1% of requests lead to errors:
-   1. July 17, 2016 - 2.26% errors
-   ```
+Please check __output.txt__ for the expected output.
 
 ## Authors
 
