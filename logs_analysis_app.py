@@ -42,7 +42,8 @@ def get_popular_authors():
         c.execute("select articles.author, authors.name, "
                   "sum(articles_ranking.view_count) as author_view_count "
                   "from articles_ranking, articles, authors "
-                  "where CONCAT('/article/', articles.slug) = articles_ranking.path "
+                  "where CONCAT('/article/', articles.slug) "
+                  "= articles_ranking.path "
                   "and articles.author = authors.id "
                   "group by articles.author, authors.name "
                   "order by author_view_count desc;")
@@ -61,7 +62,8 @@ def get_date_of_error_gt_1():
         db = psycopg2.connect(database=DBNAME)
         c = db.cursor()
         c.execute("select date, "
-                  "round((error_count*100)::numeric/total_count, 2) as error_rate "
+                  "round((error_count*100)::numeric/total_count, 2) "
+                  "as error_rate "
                   "from "
                   "(select date(log.time), count(*) as error_count, "
                   "total_view_by_date.total_view_count as total_count "
