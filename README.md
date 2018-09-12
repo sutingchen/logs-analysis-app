@@ -45,9 +45,13 @@ Please check __output.txt__ for the expected output.
 
 ## Program Design
 
-The *main* function consists of three composing function calls. In each function composition, the *display* function takes in the *get* function's output (a list of tuples) as argument, and iterates through the list and displays each item as a formatted string.
+The *main* function consists of three composing function calls. 
 
-The *display* functions consist of code using psycopg2 (a PostgreSQL adapter) to connect to the database and return the query results.
+In each function composition, the *get* functions consist of code using psycopg2 (a PostgreSQL adapter) to connect to the database and return the query results.
+
+The *display* function takes in the *get* function's output (a list of tuples) as argument, and iterates through the list and displays each item as a formatted string.
+
+### Outline of the functions
 
 | *display* functions | *get* functions |
 | ------------- | ------------- |
