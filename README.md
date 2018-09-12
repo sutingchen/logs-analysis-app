@@ -20,7 +20,7 @@ Instruction notes can be found [here](https://classroom.udacity.com/nanodegrees/
 
 3. Copy the uploaded assignment file **logs_analysis_app.py** and paste it into the **news** folder (created in step 2)
 
-4. Connect to the **news** database and execute the script below to create a new view, **articles_ranking**. This view is required by the first two log analysis sql query statement
+4. Connect to the **news** database and execute the scripts below to create 2 new views: **articles_ranking** and **total_view_by_date**.
   
 
    ```sql
@@ -31,12 +31,20 @@ Instruction notes can be found [here](https://classroom.udacity.com/nanodegrees/
    order by view_count desc);
    ```
 
-## Running the tests
+
+   ```sql
+   create view total_view_by_date 
+   as (select date(time), count(*) as total_view_count 
+   from log group by date(time));
+   ```
+   The view **article_ranking** is required by Q1 and Q2, while **total_view_by_date** is prerequisite for Q3.
+
+## Running the Tests
 
 In **/vagrant/news**, execute the following command line:
 
    ```
-   python log_analysis_app.py
+   python logs_analysis_app.py
    ```
   
 Once executed, the log analysis results should be displayed as plain text. 
