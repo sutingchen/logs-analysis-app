@@ -33,8 +33,8 @@ Instruction notes can be found [here](https://classroom.udacity.com/nanodegrees/
 
 
    ```sql
-   create view total_view_by_date 
-   as (select date(time), count(*) as total_view_count 
+   create view total_view_by_date as
+   (select date(time), count(*) as total_view_count 
    from log group by date(time));
    ```
    The view **article_ranking** is required by Q1 and Q2, while **total_view_by_date** is prerequisite for Q3.
